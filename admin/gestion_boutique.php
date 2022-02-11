@@ -49,7 +49,7 @@ if (isset($_POST['reference'], $_POST['categorie'], $_POST['titre'], $_POST['des
        copy($_FILES['photo']['tmp_name'], $photoDossier);
    }
 
-   if (isset(_GET['action']) && $_GET['action'] == 'ajout')
+   if (isset($_GET['action']) && $_GET['action'] == 'ajout')
   {
      $data = $bdd->prepare("INSERT INTO produit (reference, categorie, titre, description, couleur, taille, photo, public, prix, stock) VALUES (:reference, :categorie, :titre, :description, :couleur, :taille, :photo, :public, :prix, :stock)");
 
